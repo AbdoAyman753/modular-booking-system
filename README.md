@@ -13,70 +13,52 @@ booking-system/
 │   │   │   └── com/
 │   │   │       └── bookingsystem/
 │   │   │           ├── core/
-│   │   │           │   ├── models/
-│   │   │           │   │   └── ... # (Will hold domain models like User.java, Booking.java)
-│   │   │           │   ├── exceptions/
-│   │   │           │   │   └── ... # (Will hold custom exception classes)
-│   │   │           │   ├── utils/
-│   │   │           │   │   └── ... # (Will hold utility classes)
-│   │   │           │   └── config/
-│   │   │           │       └── CoreConfig.java  # Main core configurations
-│   │   │           ├── search/
-│   │   │           │   ├── service/
-│   │   │           │   │   └── SearchService.java
-│   │   │           │   ├── controller/
-│   │   │           │   │   └── SearchController.java
-│   │   │           │   └── config/
-│   │   │           │       └── SearchConfig.java
-│   │   │           ├── booking/
-│   │   │           │   ├── service/
-│   │   │           │   │    └── BookingService.java
-│   │   │           │   ├── controller/
-│   │   │           │   │   └── BookingController.java
-│   │   │           │   └── config/
-│   │   │           │        └── BookingConfig.java
-│   │   │           ├── payment/
-│   │   │           │   ├── service/
-│   │   │           │   │   └── PaymentService.java
-│   │   │           │   ├── controller/
-│   │   │           │   │    └── PaymentController.java
-│   │   │           │   └── config/
-│   │   │           │        └── PaymentConfig.java
-│   │   │           ├── notification/
-│   │   │           │   ├── service/
-│   │   │           │   │    └── NotificationService.java
-│   │   │           │   ├── controller/
-│   │   │           │   │    └── NotificationController.java
-│   │   │           │   └── config/
-│   │   │           │       └── NotificationConfig.java
-│   │   │           ├── audit/
-│   │   │           │   ├── service/
-│   │   │           │   │   └── AuditService.java
-│   │   │           │   ├── controller/
-│   │   │           │   │   └── AuditController.java
-│   │   │           │   └── config/
-│   │   │           │       └── AuditConfig.java
-│   │   │           ├── auth/
-│   │   │           │   ├── service/
-│   │   │           │   │   └── AuthService.java
-│   │   │           │   ├── controller/
-│   │   │           │   │   └── AuthController.java
-│   │   │           │   └── config/
-│   │   │           │        └── AuthConfig.java
-│   │   │           └── BookingSystemApplication.java
+│   │   │           │   ├── exceptions/      # Shared exceptions
+│   │   │           │   ├── utils/           # Shared utilities
+│   │   │           │   └── config/          # Shared configurations
+│   │   │           ├── search/              # Search module
+│   │   │           │   ├── models/          # Search-specific domain models
+│   │   │           │   ├── service/         # Business logic for search
+│   │   │           │   ├── controller/      # REST endpoints for search
+│   │   │           │   └── config/          # Search module configurations
+│   │   │           ├── booking/             # Booking module
+│   │   │           │   ├── models/          # Booking-specific domain models
+│   │   │           │   ├── service/         # Business logic for bookings
+│   │   │           │   ├── controller/      # REST endpoints for bookings
+│   │   │           │   └── config/          # Booking module configurations
+│   │   │           ├── payment/             # Payment module
+│   │   │           │   ├── models/          # Payment-specific domain models
+│   │   │           │   ├── service/         # Business logic for payments
+│   │   │           │   ├── controller/      # REST endpoints for payments
+│   │   │           │   └── config/          # Payment module configurations
+│   │   │           ├── notification/        # Notification module
+│   │   │           │   ├── models/          # Notification-specific domain models
+│   │   │           │   ├── service/         # Business logic for notifications
+│   │   │           │   ├── controller/      # REST endpoints for notifications
+│   │   │           │   └── config/          # Notification module configurations
+│   │   │           ├── audit/               # Audit module
+│   │   │           │   ├── models/          # Audit-specific domain models
+│   │   │           │   ├── service/         # Business logic for auditing
+│   │   │           │   ├── controller/      # REST endpoints for auditing
+│   │   │           │   └── config/          # Audit module configurations
+│   │   │           ├── auth/                # Auth module
+│   │   │           │   ├── models/          # Auth-specific domain models
+│   │   │           │   ├── service/         # Business logic for authentication
+│   │   │           │   ├── controller/      # REST endpoints for authentication
+│   │   │           │   └── config/          # Auth module configurations
+│   │   │           └── BookingSystemApplication.java  # Main application class
 │   │   └── resources/
 │   │       ├── application.properties
 │   │       ├── application-search.properties
 │   │       ├── application-booking.properties
-│   │       ├── application-payment.properties
-│   │       ├── application-notification.properties
-│   │       ├── application-audit.properties
-│   │       └── application-auth.properties
-│   └── test/
-│       └── ... #Test code files
-├── pom.xml
-├── docker-compose.yml
-└── README.md
+│   │       └── application-payment.properties
+|   |       └── application-notification.properties
+│   │       └── application-audit.properties
+|   |       └── application-auth.properties
+│   └── test/                                # Test code
+├── pom.xml                                  # Single POM file for the entire project
+├── docker-compose.yml                       # Docker Compose file
+└── README.md                                # README for the project
 
 ```
 
