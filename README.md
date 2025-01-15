@@ -4,7 +4,7 @@ This repository contains the source code for a modular booking system implemente
 
 ## Architecture
 
-```txt
+```bash
 
 booking-system/
 ├── src/
